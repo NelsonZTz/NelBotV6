@@ -685,7 +685,7 @@ reply('《《   ֎ ⃢🇲🇨⚠️SLAYER VIRTEX⚠️‼️❌⚠️‼️�
 break
 
 case 'menu':
-reply('Fitur nya \ntebak \nFamily100 \nKick \nadd \nHidetag \ns \nsmeme')              
+reply('Fitur nya \ntebak \nFamily100 \nKick \nadd \nHidetag \ngrup \nantilink \ns \nsmeme')              
 break
 
 
@@ -709,9 +709,48 @@ case 'salken':
 if (!m.isGroup) return
 reply(`salken jg kak ${pushname} 🐦`)              
 break        
+        case 'group': case 'grup': {
+                if (!m.isGroup) return sticGroup(from)
+                if (!isBotAdmins) return sticBotAdmin(from)
+                if (!isAdmins) return sticAdmin(from)
+                if (args[0] === 'close'){
+                    await chika.groupSettingUpdate(m.chat, 'announcement').then((res) => reply(`Sukses Menutup Group`)).catch((err) => reply(jsonformat(err)))
+                } else if (args[0] === 'open'){
+                    await chika.groupSettingUpdate(m.chat, 'not_announcement').then((res) => reply(`Sukses Membuka Group`)).catch((err) => reply(jsonformat(err)))
+                } else {
+                let buttons = [
+                        { buttonId: 'group open', buttonText: { displayText: 'Open' }, type: 1 },
+                        { buttonId: 'group close', buttonText: { displayText: 'Close' }, type: 1 }
+                    ]
+                    await chika.sendButtonText(m.chat, buttons, `Mode Group`, ownername, m)
+
+             }
+            }
+            break
+
+case 'antilink': {
+                if (!m.isGroup) return sticGroup(from)
+                if (!isBotAdmins) return sticBotAdmin(from)
+                if (!isAdmins) return sticAdmin(from)
+                if (args[0] === "on") {
+                if (db.data.chats[m.chat].antilink) return reply(`Sudah Aktif Sebelumnya`)
+                db.data.chats[m.chat].antilink = true
+                reply(`Antilink Aktif !`)
+                } else if (args[0] === "off") {
+                if (!db.data.chats[m.chat].antilink) return reply(`Sudah Tidak Aktif Sebelumnya`)
+                db.data.chats[m.chat].antilink = false
+                reply(`Antilink Tidak Aktif !`)
+                } else {
+                 let buttons = [
+                        { buttonId: 'antilink on', buttonText: { displayText: 'On' }, type: 1 },
+                        { buttonId: 'antilink off', buttonText: { displayText: 'Off' }, type: 1 }
+                    ]
+                    await chika.sendButtonText(m.chat, buttons, `Mode Antilink`, ownername, m)
+                }
+             }
+             break
         
-        
-        case 'sticker': case 's': case 'stickergif': case 'sgif': {
+        case 'sticker': case 's': case 'stickergif': case 'sgif': case 'stiker': {
             if (!quoted) throw `Balas Video/Image Dengan Caption ${prefix + command}`
             reply(mess.wait)
                     if (/image/.test(mime)) {
