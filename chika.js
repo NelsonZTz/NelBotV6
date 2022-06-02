@@ -910,12 +910,14 @@ break
 
 case 'sini':
 case 'yok':
+case 'ayok':
  if (!isBotAdmins) return
 omkeh3 = fs.readFileSync('./image/Gamau.mp3')
 chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
  break   
  
  case 'lag':
+ case 'ngelag':
  if (!isBotAdmins) return
 omkeh3 = fs.readFileSync('./image/Ngelag.mp3')
 chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
@@ -956,19 +958,19 @@ omkeh3 = fs.readFileSync('./image/Imut.mp3')
 chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
  break   
 
- case 'Uwu':
+ case 'uwu':
  if (!isBotAdmins) return
 omkeh3 = fs.readFileSync(`./image/Uwu.mp3`)
 chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
  break   
  
-  case 'Uwuii':
+  case 'uwuii':
  if (!isBotAdmins) return
 omkeh3 = fs.readFileSync(`./image/Uwuii.mp3`)
 chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
  break   
  
- case 'Uwuuu':
+ case 'uwuuu':
  if (!isBotAdmins) return
 omkeh3 = fs.readFileSync(`./image/Uwuuu.mp3`)
 chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
@@ -988,7 +990,7 @@ setTimeout( () => {
 break
 
  case 'I like you':
- case 'I':
+ case 'i':
  if (!isBotAdmins) return
 omkeh3 = fs.readFileSync('./image/I like you.mp3')
 chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
