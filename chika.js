@@ -708,7 +708,36 @@ reply(`salken jg kak ${pushname} 🐦`)
 break        
         
         
-        
+        case 'sticker': case 's': case 'stickergif': case 'sgif': {
+            if (!quoted) throw `Balas Video/Image Dengan Caption ${prefix + command}`
+            reply(mess.wait)
+                    if (/image/.test(mime)) {
+                let media = await quoted.download()
+                let encmedia = await chika.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: `By ${pushname}` })
+                await fs.unlinkSync(encmedia)
+            } else if (/video/.test(mime)) {
+                if ((quoted.msg || quoted).seconds > 11) return reply('Maksimal 10 detik!')
+                let media = await quoted.download()
+                let encmedia = await chika.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: `By ${pushname}` })
+                await fs.unlinkSync(encmedia)
+            } else {
+                throw `Kirim Gambar/Video Dengan Caption ${prefix + command}\nDurasi Video 1-9 Detik`
+                }
+            }
+            break
+case 'smeme': case 'stickermeme': case 'stickmeme': {
+let { TelegraPh } = require('./lib/uploader')
+if (!text) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+if (text.includes('|')) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+if (!/image/.test(mime)) return reply(`Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`)
+reply(mess.wait)
+mee = await chika.downloadAndSaveMediaMessage(quoted)
+mem = await TelegraPh(mee)
+meme = `https://api.memegen.link/images/custom/-/${text}.png?background=${mem}`
+memek = await chika.sendImageAsSticker(m.chat, meme, m, { packname: global.packname, author: `By ${pushname}` })
+await fs.unlinkSync(memek)
+}
+break
     
         
         
