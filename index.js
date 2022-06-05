@@ -65,7 +65,17 @@ async function startchika() {
 
     store.bind(chika.ev)
     
-   
+   // anticall auto block
+    chika.ws.on('CB:call', async (json) => {
+    const callerId = json.content[0].attrs['call-creator']
+    if (json.content[0].tag == 'offer') {
+    let pa7rick = await chika.sendContact(callerId, global.owner)
+    chika.sendMessage(callerId, { text: `Sistem otomatis block!\nJangan menelpon bot!\nSilahkan Hubungi Owner Untuk Dibuka !`}, { quoted : pa7rick })
+    await sleep(8000)
+    await chika.updateBlockStatus(callerId, "block")
+    }
+    })
+
 
     chika.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
@@ -82,7 +92,8 @@ async function startchika() {
             console.log(err)
         }
     })
-    
+
+
     // Group Update
     chika.ev.on('groups.update', async pea => {
        //console.log(pea)
