@@ -65,16 +65,7 @@ async function startchika() {
 
     store.bind(chika.ev)
     
-    // anticall auto block
-    chika.ws.on('CB:call', async (json) => {
-    const callerId = json.content[0].attrs['call-creator']
-    if (json.content[0].tag == 'offer') {
-    let pa7rick = await chika.sendContact(callerId, global.owner)
-    chika.sendMessage(callerId, { text: `Sistem otomatis block!\nJangan menelpon bot!\nSilahkan Hubungi Owner Untuk Dibuka !`}, { quoted : pa7rick })
-    await sleep(8000)
-    await chika.updateBlockStatus(callerId, "block")
-    }
-    })
+   
 
     chika.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
@@ -128,24 +119,7 @@ async function startchika() {
                     ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 
-                // Get Profile Picture Group
-                try {
-                    ppgroup = await chika.profilePictureUrl(anu.id, 'image')
-                } catch {
-                    ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-                }
-
-                if (anu.action == 'add') {
-                	chika.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `★──────「𝗪𝗲𝗹𝗰𝗼𝗺𝗲」 ─────★\n\n┌────────────── \n│ *𝐇𝐚𝐥𝐨 𝐤𝐚𝐤👋* @${num.split("@")[0]} \n│≻─「 *𝐈𝐍𝐓𝐑𝐎* 」─ \n│𝐍𝐚𝐦𝐚: \n│𝐔𝐦𝐮𝐫: \n│𝐆𝐞𝐧𝐝𝐞𝐫:\n│𝐀𝐬𝐤𝐨𝐭:\n│𝐒𝐭𝐚𝐭𝐮𝐬:\n┣━━━━━━━━━━━━━━━━━━━━━\n` })
-                } else if (anu.action == 'remove') {
-                	
-                    chika.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `★──────「𝐆𝐨𝐨𝐝 𝐁𝐲𝐞」──────★\n\n┌────────────── \n│𝐆𝐨𝐨𝐝 𝐁𝐲𝐞 𝐊𝐚𝐤👋@${num.split("@")[0]} \n│\n╰── 「 *𝐒𝐚𝐦𝐩𝐚𝐢 𝐉𝐮𝐦𝐩𝐚 𝐊𝐚𝐤* 」──\n\n` })
-                }
-            }
-        } catch (err) {
-            console.log(err)
-        }
-    })
+                
 	
     // Setting
     chika.decodeJid = (jid) => {
