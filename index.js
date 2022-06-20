@@ -136,10 +136,10 @@ async function startchika() {
                 }
 
                 if (anu.action == 'add') {
-                	
+                	chika.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `✦━━━━━━[ *WELCOME* ]━━━━━━✦\n\n┏––––––━━━━━━━━•\n│⫹⫺ 𝗚𝗰: ${metadata.subject}\n┣━━━━━━━━┅┅┅\n│( 👋 𝗛𝗮𝗹𝗼 𝗞𝗮𝗸  @${num.split("@")[0]})\n├[ *INTRO* ]—\n│ *𝐍𝐚𝐦𝐚:* \n│ *𝐔𝐦𝐮𝐫:* \n│ *𝐆𝐞𝐧𝐝𝐞𝐫:*\n│ *𝐀𝐬𝐤𝐨𝐭:*\n│ *𝐒𝐭𝐚𝐭𝐮𝐬:*\n┗––––––━━┅┅┅\n\n––––┅┅ *DESCRIPTION* ┅┅––––\n\n\n\n\n\n\n\n\n\n\n\n      𝗕𝗮𝗰𝗮 𝗮𝗷𝗮 𝘀𝗲𝗱𝗶𝗿𝗶.   \n\n\n\n\n\n\n\n\n\n\n\n ` })
                 } else if (anu.action == 'remove') {
                 	
-                    
+                    chika.sendMessage(anu.id, { image: { url: ppuser }, contextInfo: { mentionedJid: [num] }, caption: `✦━━━━━━[ *GOOD BYE* ]━━━━━━✦\nSayonara kak 👋( ╹▽╹ )\n\nTetap Putus Asa Jangan Semangat Dan Jadilah Beban Keluarga 🤙🗿\n\n\n\n\n\n\n\n\n\n\n\n` })
                 }
             }
         } catch (err) {
