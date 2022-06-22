@@ -1613,7 +1613,7 @@ chika.sendMessage(from,{audio: omkeh5, mimetype:'audio/mp4', ptt:true }, {quoted
     case "terpintar":
     case "lonte":
     case "beban":
-    case "pedo"
+    case "pedo":
     case "nyimak":
     case "sange":
     case "lagisad": 	 
