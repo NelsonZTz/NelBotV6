@@ -1691,7 +1691,7 @@ if (!isBotAdmins) return
             let ments = [me, jodoh]
             let buttons = [
                         { buttonId: 'jodu', buttonText: { displayText: '𝐍𝐠𝐠𝐚𝐤, 𝐝𝐢𝐚 𝐛𝐨𝐨𝐧𝐠' }, type: 1 },
-                         { buttonId: 'zzksa', buttonText: { displayText: '\n\n𝐏𝐚𝐜𝐚𝐫𝐚𝐧 𝐲𝐨𝐤 𝐬𝐚𝐲𝐠(⁎˃ᴗ˂⁎)` }, type: 1 },
+                         { buttonId: 'zzksa', buttonText: { displayText: `\n\n𝐏𝐚𝐜𝐚𝐫𝐚𝐧 𝐲𝐨𝐤 𝐬𝐚𝐲𝐠(⁎˃ᴗ˂⁎)` }, type: 1 },
                            { buttonId: 'jodu', buttonText: { displayText: '𝐂𝐢𝐞𝐞 (≧▽≦) ' }, type: 1 }
                     ]
                     await chika.sendButtonText(m.chat, buttons, jawab, chika.user.name, m, {mentions: ments})
