@@ -1782,7 +1782,7 @@ case 'lesbicek':
 case 'ceklesbi':
 if (!isBotAdmins) return
 					if (!q) return reply(`Penggunaan ${command} Nama\n\nContoh : ${command} ${pushname}`)
-					const sangeh = ['0','1','2','3',4','5', '10', '15','20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
+					const sangeh = ['0','1','2','3','4','5','10', '15','20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
                     reply(`${command} ${q}\n\n${sange}% \n`)
 		break
