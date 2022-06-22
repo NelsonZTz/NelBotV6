@@ -1106,7 +1106,7 @@ break
 
 
 case 'gropen':
-reply('Tungu saja mungkin dia lagi sibuk atau data nya abis\n\n intinya pasti bakal di Jawab ko🐦 \kalu gk di jawab chat nomor ini wa.me//${ownernomer}')
+reply(`Tungu saja mungkin dia lagi sibuk atau data nya abis\n\n intinya pasti bakal di Jawab ko🐦 \kalu gk di jawab chat nomor ini wa.me//${ownernomer}`)
 break
 
 case 'p':
@@ -1123,7 +1123,7 @@ case 'Son':
 case 'P':
 if (m.isGroup) return reply('*iya Ada yang bisa saya bantu kak ${pushname}🐦*')
 let buttons = [
-                        { buttonId: 'gropen', buttonText: { displayText: '𝐒𝐚𝐲𝐚 𝐌𝐞𝐧𝐜𝐚𝐫𝐢 ${ownername}' }, type: 1 },
+                        { buttonId: 'gropen', buttonText: { displayText: `𝐒𝐚𝐲𝐚 𝐌𝐞𝐧𝐜𝐚𝐫𝐢 ${ownername}` }, type: 1 },
                         { buttonId: 'grclose', buttonText: { displayText: '𝐆𝐚𝐤 𝐉𝐚𝐝𝐢🐦' }, type: 1 }
                     ]
                     await chika.sendButtonText(m.chat, buttons, `𝐈𝐲𝐚 𝐀𝐝𝐚 𝐘𝐚𝐧𝐠 𝐁𝐢𝐬𝐚 𝐒𝐚𝐲𝐚 𝐁𝐚𝐧𝐭𝐮 𝐊𝐚𝐤 ${pushname} ?\n`, chika.user.name, m)
