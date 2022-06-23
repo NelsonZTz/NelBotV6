@@ -1121,7 +1121,7 @@ case 'oi':
 case 'son':
 case 'Son':
 case 'P':
-if (m.isGroup) return reply('*iya Ada yang bisa saya bantu kak ${pushname}🐦*')
+if (m.isGroup) return reply(`*iya Ada yang bisa saya bantu kak ${pushname}🐦*`)
 let buttons = [
                         { buttonId: 'gropen', buttonText: { displayText: `𝐒𝐚𝐲𝐚 𝐌𝐞𝐧𝐜𝐚𝐫𝐢 ${ownername}` }, type: 1 },
                         { buttonId: 'grclose', buttonText: { displayText: '𝐆𝐚𝐤 𝐉𝐚𝐝𝐢🐦' }, type: 1 }
