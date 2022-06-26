@@ -1573,9 +1573,7 @@ chika.sendMessage(from,{audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted
  break   
  
  
- case 'nelson':
- case 'nel':
- case 'son':
+ 
  case 'apa':
  case 'apasih':
  case 'idih':
@@ -1583,6 +1581,7 @@ chika.sendMessage(from,{audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted
  case 'bot':
  case '@𝙉𝙚𝙡𝘽𝙤𝙩-𝐌𝐃':
  if (!m.isGroup) return
+if (isCreator) return sayangku(from)
  if (!isBotAdmins) return
  omkeh5 = fs.readFileSync('./apasih.mp3')
 chika.sendMessage(from,{audio: omkeh5, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
@@ -1844,6 +1843,57 @@ break
           reply(`Exif berhasil diubah menjadi\n\n⭔ Packname : ${global.packname}\n⭔ Author : ${global.author}`)
             }
             break
+case 'otagall': {
+                if (!m.isGroup) throw sticGroup(from)
+                if (!isCreator) return reply(mess.owner)
+             
+let teks = `════✪〘 *👥 Tag All* 〙✪════\n ➲ *𝐏𝐞𝐬𝐚𝐧 : ${q ? q : '𝐓𝐢𝐝𝐚𝐤 ??𝐝𝐚 𝐏𝐞𝐬𝐚𝐧'}*\n\n┌───⊷ *TAG ALL* ⊶\n`
+                 
+                for (let mem of participants) {
+                teks += `├>  @${mem.id.split('@')[0]}\n`
+                }
+                teks += `└────────────── \n\n Apa liat liat🐦`
+                chika.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+                }
+                break
+                case 'ohidetag': {
+            if (!m.isGroup) return sticGroup(from)
+            if (!isCreator) return reply(mess.owner)
+            chika.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+            }
+            break
+case 'okick': {
+		if (!m.isGroup) return sticGroup(from)
+                if (!isBotAdmins) return sticBotAdmin(from)
+                if (!isCreator) return reply(mess.owner)
+		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+		await chika.groupParticipantsUpdate(m.chat, [users], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+	}
+	break
+	case 'oadd': {
+		if (!m.isGroup) return sticGroup(from)
+                if (!isBotAdmins) return sticBotAdmin(from)
+                if (!isCreator) return reply(mess.owner)
+		let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+		await chika.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+	}
+	break
+	case 'opromote': {
+		if (!m.isGroup) return sticGroup(from)
+                if (!isBotAdmins) return sticBotAdmin(from)
+                if (!isCreator) return reply(mess.owner)
+		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+		await chika.groupParticipantsUpdate(m.chat, [users], 'promote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+	}
+	break
+	case 'odemote': {
+		if (!m.isGroup) return sticGroup(from)
+                if (!isBotAdmins) return sticBotAdmin(from)
+                if (!isCreator) return reply(mess.owner)
+		let users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+		await chika.groupParticipantsUpdate(m.chat, [users], 'demote').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
+	}
+	break
 	case 'kick': {
 		if (!m.isGroup) return sticGroup(from)
                 if (!isBotAdmins) return sticBotAdmin(from)
