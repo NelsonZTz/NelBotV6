@@ -1554,10 +1554,14 @@ nangis(from)
  case 'ajg':
  case 'anj':
  case 'babi':
+ case 'ngentot':
+ case 'ngentod':
  case 'anjg':
  case 'bangsat':
  case 'bangst':
  case 'bgst':
+ case 'yatim':
+ case 'lonte':
  case 'ajing':
  case 'bacot':
  case 'anjing':
@@ -1566,7 +1570,7 @@ nangis(from)
  if (!m.isGroup) return apasih(from)
  if (!isBotAdmins) return
   if (isAdmins) return araara(from)
- const bisaaa = ['apasih','image/Gaboleh gitu']
+ const bisaaa = ['apasih','Kasar','Kasar','Kasar','image/Gaboleh gitu']
 const gaaa = bisaaa[Math.floor(Math.random() * bisaaa.length)]
  omkeh4 = fs.readFileSync(`./${gaaa}.mp3`)
 chika.sendMessage(from,{audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
@@ -1579,7 +1583,8 @@ chika.sendMessage(from,{audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted
  case 'idih':
  case 'woi':
  case 'bot':
- case '@𝙉𝙚𝙡𝘽𝙤𝙩-𝐌𝐃':
+ case '@6281242432747':
+ case '@6281241100804':
  if (!m.isGroup) return
 if (isCreator) return sayangku(from)
  if (!isBotAdmins) return
@@ -1610,7 +1615,6 @@ chika.sendMessage(from,{audio: omkeh5, mimetype:'audio/mp4', ptt:true }, {quoted
     case "bego":
     case "pakboy":
     case "terpintar":
-    case "lonte":
     case "beban":
     case "pedo":
     case "nyimak":
@@ -1643,21 +1647,7 @@ break
 case 'casesss':
 reply('*:v*')
 break
-case 'yatim':{
- if (!m.isGroup) throw sticGroup(from)
-if (!isBotAdmins) return
-            let member = participants.map(u => u.id)
-            let oi = m.sender
-            let ytm = member[Math.floor(Math.random() * member.length)]
-            let mty = `𝐂𝐢𝐞𝐞 𝐀𝐝𝐚 𝐘𝐚𝐭𝐢𝐦 𝐁𝐚𝐫𝐮 (≧▽≦) \n\n@${ytm.split('@')[0]}\n`
-            let ments = [oi, ytm]
-            let buttons = [
-                        { buttonId: 'yatim', buttonText: { displayText: 'Yatim' }, type: 1 },
-                         { buttonId: 'awokwk', buttonText: { displayText: '𝐀𝐰𝐨𝐤𝐚𝐰𝐨𝐤 (≧▽≦)' }, type: 1 }
-                    ]
-           await chika.sendButtonText(m.chat, buttons, mty, chika.user.name, m, {mentions: ments})
-}
-break
+
 
             case 'jodohku': {
             if (!m.isGroup) throw sticGroup(from)
