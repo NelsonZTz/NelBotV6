@@ -1536,7 +1536,6 @@ chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted
  case '🥲':
  case '😔':
  case '🙂':
- case '😭':
  case '🙃':
  case ':)':
  case ':(':
