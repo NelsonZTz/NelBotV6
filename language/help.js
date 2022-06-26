@@ -12,7 +12,8 @@ Saya ${botname}, Siap Membantu anda Kapan saja dan Di manapun 🐦
 Peraturannya Jangan di spam🗿
 gak terima Yok betumbu lagi 🗿
 
-
+Jangan lupa SV owner ku ya 
+wa.me//${ownernomer}
 
 	`
 }
@@ -77,7 +78,6 @@ return`
 ├ ${prefix}bego
 ├ ${prefix}pakboy
 ├ ${prefix}terpintar
-├ ${prefix}lonte
 ├ ${prefix}beban
 ├ ${prefix}nyimak
 ├ ${prefix}sange
@@ -90,7 +90,6 @@ return`
 ├ ${prefix}gay
 ├ ${prefix}terpedo
 ├ ${prefix}wibu
-├ ${prefix}yatim
 ├ ${prefix}sayang
 ├ ${prefix}ngewe
 ├ ${prefix}selingkuh
@@ -445,16 +444,16 @@ Berapapun donasi kalian akan sangat berarti 👍
 
 Thanks!
 
-———「 *SEWA | RUN BOT* 」———
+  —「 *SEWA | JADI BOT | RUN BOT* 」—
 
   *_SEWA BOT_* 
-  *≻* Sewa Bot Gratis/1grup (1 hari )
+  *≻* Sewa Bot free/1grup (1 hari)
   *≻* Sewa Bot 15k/1grup (1 minggu)
-  *≻* Sewa Bot 20k/2grup (1 bulan)
-  *≻* Sewa Bot 30k/4grup (Permanen)
+  *≻* Sewa Bot 20k/1grup (1 bulan)
+  *≻* Sewa Bot 30k/3grup (Permanen)
 
-  *JADI BOT*  *Tutup*
-  *≻* Jadi Bot 15k Tidak Owner (1 minggu)
+  *JADI BOT*  
+  *≻* Jadi Bot 15k TidakOwner (1 minggu)
   *≻* Jadi Bot + Owner 20k (1 bulan)
   *≻* Jadi Bot + Owner 30k (Permanen)
 
@@ -464,9 +463,9 @@ Thanks!
   *≻* Run Bot 20k (Permanen)
 
    *_PEMBAYARAN_* 
+   - _Gopay_
    - _Dana_
    - _Pulsa +5k_
- 
   *Minat? Langsung chat aja ya cuy 🐦*
 
   *Contact person Owner* :
