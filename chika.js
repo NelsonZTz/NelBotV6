@@ -1452,8 +1452,6 @@ chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted
  case ':v':
  case 'awokawok':
  case 'hihi':
-case 'tai':
-case 'njir':
  if (!isBotAdmins) return
 omkeh3 = fs.readFileSync('./image/Hihi.mp3')
 chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
@@ -1545,7 +1543,6 @@ chika.sendMessage(from,{audio: omkeh3, mimetype:'audio/mp4', ptt:true }, {quoted
 const gaa = bisaa[Math.floor(Math.random() * bisaa.length)]
  omkeh4 = fs.readFileSync(`./${gaa}.mp3`)
 chika.sendMessage(from,{audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
-nangis(from)
  break   
  
 
@@ -1570,8 +1567,6 @@ nangis(from)
  case 'ajing':
  case 'bacot':
  case 'anjing':
- case 'bot ajg':
- case 'bot babi':
  if (!m.isGroup) return apasih(from)
  if (!isBotAdmins) return
   if (isAdmins) return araara(from)
@@ -1584,12 +1579,6 @@ chika.sendMessage(from,{audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted
  
  
  case 'apa':
- case 'apasih':
- case 'idih':
- case 'woi':
- case 'bot':
- case '@6281242432747':
- case '@6281241100804':
  if (!m.isGroup) return
 if (isCreator) return sayangku(from)
  if (!isBotAdmins) return
@@ -1712,7 +1701,7 @@ case 'ngewe': {
                     ]
                     await chika.sendButtonText(m.chat, buttons, jawab, chika.user.name, m, {mentions: menst})
             }
-            nangis(from)
+            
             break
 
 case 'jadian': {
