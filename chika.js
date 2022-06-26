@@ -211,6 +211,12 @@ const gaa = bisaa[Math.floor(Math.random() * bisaa.length)]
 omkeh4 = fs.readFileSync(`./image/${gaa}.mp3`)
 chika.sendMessage(from, {audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
 }
+const kasar = (hehe) => {
+const bisaa = ['Kasar']
+const gaa = bisaa[Math.floor(Math.random() * bisaa.length)]
+omkeh4 = fs.readFileSync(`./image/${gaa}.mp3`)
+chika.sendMessage(from, {audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
+}
 const sayangku = (hehe) => {
 omkeh4 = fs.readFileSync(`./image/Sayang.mp3`)
 chika.sendMessage(from, {audio: omkeh4, mimetype:'audio/mp4', ptt:true }, {quoted:m}) 
@@ -335,7 +341,7 @@ chika.sendImageAsSticker(m.chat, ano, m, { packname: global.packname, author: `�
         if (isgclink) return reply(`𝗨𝗻𝘁𝘂𝗻𝗴 𝗹𝗶𝗻𝗸 𝗴𝗿𝘂𝗽 𝗶𝗻𝗶, 𝗸𝗮𝗹𝘂 𝗯𝘂𝗸𝗮𝗻 𝘂𝗱𝗮𝗵 𝗰𝘆𝗮 𝗸𝗶𝗸 (￣▽￣)`)
         if (isAdmins) return reply('𝗨𝗽𝘀 𝗵𝗮𝗺𝗽𝗶𝗿 𝗰𝘆𝗮 𝗸𝗶𝗸, 𝘂𝗻𝘁𝘂𝗻𝗴 𝗮𝗱𝗺𝗶𝗻𝗸𝘂 ´･ᴗ･`')
         if (isCreator) return reply(`𝗨𝗽𝘀( ･_･) 𝗟𝘂𝗽𝗮, 𝗧𝗲𝗿𝗻𝘆𝗮𝘁𝗮 𝗸𝗮𝗺𝘂 𝗼𝘄𝗻𝗲𝗿 𝗕𝗼𝘁 𝗸𝘂 ♡＾▽＾♡`)
-        m.reply('𝗗𝗮𝗱𝗮 𝗕𝗲𝗯𝗮𝗻(≧▽≦)👋. . .') 
+        reply('𝗗𝗮𝗱𝗮 𝗕𝗲𝗯𝗮𝗻(≧▽≦)👋. . .') 
         chika.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
         }
         }
@@ -394,7 +400,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await chika.sendButtonText(m.chat, [{ buttonId: 'tebak lagu', buttonText: { displayText: 'Tebak Lagu' }, type: 1 }], `🎮 Tebak Lagu 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, chika.user.name, m)
                 delete tebaklagu[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (kuismath.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -403,7 +409,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await m.reply(`🎮 Kuis Matematika  🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? kirim ${prefix}math mode`)
                 delete kuismath[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakgambar.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -412,7 +418,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await chika.sendButtonText(m.chat, [{ buttonId: 'tebak gambar', buttonText: { displayText: 'Tebak Gambar' }, type: 1 }], `🎮 Tebak Gambar 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, chika.user.name, m)
                 delete tebakgambar[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakkata.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -421,7 +427,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await chika.sendButtonText(m.chat, [{ buttonId: 'tebak kata', buttonText: { displayText: 'Tebak Kata' }, type: 1 }], `🎮 Tebak Kata 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, chika.user.name, m)
                 delete tebakkata[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (caklontong.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -432,7 +438,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
                 await chika.sendButtonText(m.chat, [{ buttonId: 'tebak lontong', buttonText: { displayText: 'Tebak Lontong' }, type: 1 }], `🎮 Cak Lontong 🎮\n\nJawaban Benar 🎉\n*${deskripsi}*\n\nIngin bermain lagi? tekan button dibawah`, chika.user.name, m)
                 delete caklontong[m.sender.split('@')[0]]
 		delete caklontong_desk[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -441,7 +447,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await chika.sendButtonText(m.chat, [{ buttonId: 'tebak kalimat', buttonText: { displayText: 'Tebak Kalimat' }, type: 1 }], `🎮 Tebak Kalimat 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, chika.user.name, m)
                 delete tebakkalimat[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 
         if (tebaklirik.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -450,7 +456,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await chika.sendButtonText(m.chat, [{ buttonId: 'tebak lirik', buttonText: { displayText: 'Tebak Lirik' }, type: 1 }], `🎮 Tebak Lirik 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, chika.user.name, m)
                 delete tebaklirik[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
 	    
 	if (tebaktebakan.hasOwnProperty(m.sender.split('@')[0]) && isCmd) {
@@ -459,7 +465,7 @@ ${Array.from(room.jawaban, (jawaban, index) => {
             if (budy.toLowerCase() == jawaban) {
                 await chika.sendButtonText(m.chat, [{ buttonId: 'tebak tebakan', buttonText: { displayText: 'Tebak Tebakan' }, type: 1 }], `🎮 Tebak Tebakan 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`, chika.user.name, m)
                 delete tebaktebakan[m.sender.split('@')[0]]
-            } else m.reply('*Jawaban Salah!*')
+            } else reply('*Jawaban Salah!*')
         }
         
         //TicTacToe
@@ -470,14 +476,14 @@ ${Array.from(room.jawaban, (jawaban, index) => {
 	    let isWin = !1
 	    let isTie = !1
 	    let isSurrender = !1
-	    // m.reply(`[DEBUG]\n${parseInt(m.text)}`)
+	    // reply(`[DEBUG]\n${parseInt(m.text)}`)
 	    if (!/^([1-9]|(me)?nyerah|surr?ender|off|skip)$/i.test(m.text)) return
 	    isSurrender = !/^[1-9]$/.test(m.text)
 	    if (m.sender !== room.game.currentTurn) { // nek wayahku
 	    if (!isSurrender) return !0
 	    }
 	    if (!isSurrender && 1 > (ok = room.game.turn(m.sender === room.game.playerO, parseInt(m.text) - 1))) {
-	    m.reply({
+	    reply({
 	    '-3': 'Game telah berakhir',
 	    '-2': 'Invalid',
 	    '-1': 'Posisi Invalid',
@@ -571,13 +577,13 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
 	    if (jwb && reg.test(m.text) && !roof.pilih && !m.isGroup) {
 	    roof.pilih = reg.exec(m.text.toLowerCase())[0]
 	    roof.text = m.text
-	    m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
+	    reply(`Kamu telah memilih ${m.text} ${!roof.pilih2 ? `\n\nMenunggu lawan memilih` : ''}`)
 	    if (!roof.pilih2) chika.sendText(roof.p2, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
 	    }
 	    if (jwb2 && reg.test(m.text) && !roof.pilih2 && !m.isGroup) {
 	    roof.pilih2 = reg.exec(m.text.toLowerCase())[0]
 	    roof.text2 = m.text
-	    m.reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
+	    reply(`Kamu telah memilih ${m.text} ${!roof.pilih ? `\n\nMenunggu lawan memilih` : ''}`)
 	    if (!roof.pilih) chika.sendText(roof.p, '_Lawan sudah memilih_\nSekarang giliran kamu', 0)
 	    }
 	    let stage = roof.pilih
@@ -607,7 +613,7 @@ klik https://wa.me/${botNumber.split`@`[0]}`, m, { mentions: [roof.p, roof.p2] }
             let afkTime = user.afkTime
             if (!afkTime || afkTime < 0) continue
             let reason = user.afkReason || ''
-            m.reply(`
+            reply(`
 Jangan tag dia!
 Dia sedang AFK ${reason ? 'dengan alasan ' + reason : 'tanpa alasan'}
 Selama ${clockString(new Date - afkTime)}
@@ -616,7 +622,7 @@ Selama ${clockString(new Date - afkTime)}
 
         if (db.data.users[m.sender].afkTime > -1) {
             let user = global.db.data.users[m.sender]
-            m.reply(`
+            reply(`
 Kamu berhenti AFK${user.afkReason ? ' setelah ' + user.afkReason : ''}
 Selama ${clockString(new Date - user.afkTime)}
 `.trim())
@@ -1140,13 +1146,13 @@ case 'siang':
 case 'malam':
 case 'hi':
 case 'halo':
+case 'hayy':
 case 'hay':
 reply(`${command} juga kak ${pushname} 🐦`)              
 break
 
 
-case 'tes':
-if (!m.isGroup) return
+case 'tes': 
 reply('Naoo?')              
 break
 
@@ -1176,7 +1182,7 @@ break
                 let user = global.db.data.users[m.sender]
                 user.afkTime = + new Date
                 user.afkReason = text
-                reply(`${m.pushName} Telah Afk ${text ? ': ' + text : ''}`)
+                reply(`*${m.pushName} Telah Afk ${text ? ': ' + text : ''}*`)
             }
             break	
         case 'ttc': case 'ttt': case 'tictactoe': {
@@ -2383,13 +2389,12 @@ break
              }
              break
 
-case 't': {
-if (!isCreator) return 
+case 't': { 
             if (!quoted) throw `Balas Video/Image Dengan Caption ${prefix + command}`
             reply(mess.wait)
                     if (/image/.test(mime)) {
                 let media = await quoted.download()
-                let encmedia = await chika.sendImageAsSticker(m.chat, media, m, { packname: `Punya`, author: `Nelson
+                let encmedia = await chika.sendImageAsSticker(m.chat, media, m, { packname: `Punya`, author: `${pushname}
 
 
 
@@ -2413,7 +2418,7 @@ if (!isCreator) return
             } else if (/video/.test(mime)) {
                 if ((quoted.msg || quoted).seconds > 11) return reply('Maksimal 10 detik!')
                 let media = await quoted.download()
-                let encmedia = await chika.sendVideoAsSticker(m.chat, media, m, { packname: `Punya` , author: `Nelson
+                let encmedia = await chika.sendVideoAsSticker(m.chat, media, m, { packname: `Punya` , author: `${pushname}
 
 
 
@@ -2847,23 +2852,7 @@ case 'webtonsearch': case 'webtoon':
                     reply(mess.error)
                 })
             break
-case 'waifus': case 'nekos': case 'trap': case 'blowjob': {
-         if (!m.isGroup) throw Sesat(from) 
-         if (!isBotAdmins) throw Sesat(from)
-         if (!isAdmins) throw Sesat(from)     
-         reply(mess.wait)
-         chika.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generate Random ' + command }, { quoted: m })            
-         setTimeout( () => {
-         Sesat2(from)    
-         }, 1200)
-  }
-            break
-             case 'husbu': case 'neko': case 'shinobu': case 'megumin': {
-         if (!m.isGroup) throw sticGroup(from)      
- reply(mess.wait)
-                chika.sendMessage(m.chat, { image: { url: api('zenz', '/api/random/'+command, {}, 'apikey') }, caption: 'Generate Random ' + command }, { quoted: m })
-            }
-            break
+
 	    case 'couple': {
                 reply(mess.wait)
                 let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
@@ -4315,7 +4304,7 @@ if (!m.isGroup) throw sticGroup(from)
 					})
 					break
 
-case 'nekoo': case 'loli':
+case 'neko': case 'loli':
 if (!m.isGroup) throw sticGroup(from)
 					m.reply(mess.wait)
 					axios.get(`https://api.waifu.pics/sfw/neko`)
